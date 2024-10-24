@@ -15,14 +15,14 @@ pipeline {
         }
         stage('List Files') {
             steps {
-                dir('assignment9') {
+                dir('ModernDev') {
                     sh 'ls -l'
                 }
             }
         }
         stage('Build') {
             steps {
-                dir('assignment9') {
+                dir('ModernDev') {
                     // Ensure the Docker binary is found using the provided PATH
                     sh 'docker build -t ruchi563/assignment9 -f Dockerfile .'
                 }
